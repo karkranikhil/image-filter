@@ -11,6 +11,7 @@ const INITIAL={
   saturate:'1',
   opacity:'1',
   sepia:'0',
+  invert:'0'
 }
 class App extends Component {
   constructor() {
@@ -23,6 +24,12 @@ class App extends Component {
   changeValue= (event)=>{
     this.setState({
       [event.target.name]:event.target.value
+    })
+    
+  }
+  resetValue= (event)=>{
+    this.setState({
+      ...INITIAL
     })
     
   }
@@ -58,6 +65,7 @@ class App extends Component {
        opacity={this.state.opacity} 
        saturate={this.state.saturate}
        sepia={this.state.sepia} 
+       invert={this.state.invert}
        src={this.state.url} alt="your image" /></div>
         
       <Container>
@@ -71,6 +79,8 @@ class App extends Component {
         <Slider name="opacity" value={this.state.opacity} min="0" max="1" callback={()=>this.changeValue} step="0.1"/>
         <Slider name="saturate" value={this.state.saturate} min="1" max="10" callback={()=>this.changeValue}/>
         <Slider name="sepia" value={this.state.sepia} min="0" max="10" callback={()=>this.changeValue}/>
+        <Slider name="invert" value={this.state.invert} min="0"  step="10" max="100" callback={()=>this.changeValue}/>
+        <button onClick={this.resetValue} className="resetBtn">Reset</button>
        </div>
       
       </Container>

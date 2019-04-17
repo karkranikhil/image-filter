@@ -11,8 +11,8 @@ export const Container = styled.div`
         width:100%;
     }
     .slidecontainer {
-        display:flex;
         padding:15px;
+        display: inline-block;
       }
       
       .slider {
@@ -48,7 +48,16 @@ export const Container = styled.div`
         background: #2195f3;
         cursor: pointer;
       }
+      .resetBtn{
+        padding: 10px 20px;
+        background: #2194f3;
+        color: white;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 10em;
+      }
 `
 export const Image  = styled.img`
- filter:${props => `blur(${props.blur}px) grayscale(${props.greyscale}) brightness(${props.brightness}) contrast(${props.contrast}) hue-rotate(${props.hue}deg) opacity(${props.opacity}) saturate(${props.saturate}) sepia(${props.sepia})`}
+ filter:${props => `blur(${props.blur}px) grayscale(${props.greyscale}) brightness(${props.brightness}) contrast(${props.contrast}) hue-rotate(${props.hue}deg) opacity(${props.opacity}) saturate(${props.saturate}) sepia(${props.sepia}) invert(${props.invert})`}
 `
