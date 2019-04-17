@@ -12,3 +12,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.Navbar{
+  background: #2195f3;
+    padding: 10px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+#imageUpload{
+  display: none;
+}
+.uploadBtn{
+  height: 40px;
+  line-height: 40px;
+  background: #2294f3;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px;
+}
+.padding15{
+  padding: 15px;;
+}
+.width80{
+  width:80%;
+}
+.width15{
+  width:15%;
+}
+.textcolor{
+  color:#1976d2;
+}
+.heading{
+  margin: 0;
+  padding: 0px 15px 10px 15px;
+
+}
+.filterStyle{
+  text-transform: uppercase;
+  font-weight: 700;
+}
