@@ -20,7 +20,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://yourusername.github.io/repository-name",
+  "homepage": "https://karkranikhil.github.io/image-filter",
   "browserslist": [
     ">0.2%",
     "not dead",
