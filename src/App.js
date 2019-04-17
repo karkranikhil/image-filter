@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './logo.svg'
 import './App.css';
 import {Container, Image} from './style.js'
 const INITIAL={
@@ -42,17 +42,14 @@ class App extends Component {
     return (
       <>
       <div className="Navbar">
-        <div>CSS Filter Demo with react and Styled components</div>
+        <div className="flex-1">CSS Filter Demo with react and Styled components</div>
+        
           <div>
-          <label htmlFor="imageUpload" className="uploadBtn">Try your photo</label>
+          <label htmlFor="imageUpload" className="uploadBtn">Try your image</label>
           <input type='file' onChange={this.readURL} id="imageUpload"/>
         </div>
       </div>
-      
-        
-      <Container>
-      
-      <Image id="blah"
+      <div className="img-bg"><Image id="blah" className="responsive"
        blur={this.state.blur}
        greyscale={this.state.greyscale}
        brightness={this.state.brightness}
@@ -61,7 +58,9 @@ class App extends Component {
        opacity={this.state.opacity} 
        saturate={this.state.saturate}
        sepia={this.state.sepia} 
-       src={this.state.url} alt="your image" />
+       src={this.state.url} alt="your image" /></div>
+        
+      <Container>
        <div className="width100">
        <h2 className="textcolor padding15 heading">Customize Your Image</h2>
         <Slider name="blur" value={this.state.blur} min="0" max="10" callback={()=>this.changeValue}/>
@@ -82,8 +81,8 @@ class App extends Component {
 export const Slider=(props)=>{
   return (
       <div className="slidecontainer">
-        <div className="width15 filterStyle">{props.name}:</div> 
-        <div className="width80"><input type="range" min={props.min} max={props.max} value={props.value} step={props.step || 1} className="slider" name={props.name} id={props.name} onChange={props.callback()}/></div>
+        <div className="filterStyle">{props.name}:</div> 
+        <div className="flex-1"><input type="range" min={props.min} max={props.max} value={props.value} step={props.step || 1} className="slider" name={props.name} id={props.name} onChange={props.callback()}/></div>
       </div>
   )
 }
